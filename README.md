@@ -1,70 +1,109 @@
-# Getting Started with Create React App
+# SEA Salon Application
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+SEA Salon is a web application for booking salon services, submitting customer reviews, and managing user authentication. This project includes both frontend and backend components.
 
-## Available Scripts
+## Table of Contents
 
-In the project directory, you can run:
+- [Features](#features)
+- [Technologies Used](#technologies-used)
+- [Setup and Installation](#setup-and-installation)
+- [Running the Application](#running-the-application)
 
-### `npm start`
+  
+## Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- User Authentication (Signup, Login, Logout)
+- Booking Salon Services
+- Protected Routes for Authenticated Users
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Technologies Used
 
-### `npm test`
+- Frontend:
+  - React
+  - Tailwind CSS
+  - Axios
+  - React Router DOM
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Backend:
+  - Node.js
+  - Express
+  - MongoDB
+  - Mongoose
+  - JSON Web Tokens (JWT)
+  - bcryptjs
 
-### `npm run build`
+## Setup and Installation
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Prerequisites
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Node.js (v20.x)
+- MongoDB
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Installation
 
-### `npm run eject`
+1. **Clone the repository:**
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+   ```bash
+   git clone https://github.com/your-username/sea-salon.git
+   cd sea-salon
+  
+2. **Install dependencies for backend:**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+  ```bash
+   cd backend
+   npm install
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+3. **Install dependencies for both frontend:**
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+  ```bash
+   cd ../sea-salon
+   npm install
 
-## Learn More
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Environtment Variables
+  Create a .env file in the backend directory and add the following environment variables:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+   MONGODB_URI=mongodb://127.0.0.1:27017/seasalon
+   JWT_SECRET=your_jwt_secret_key
+   PORT=5000
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Running the Application
+  Start MongoDB
+  Ensure MongoDB is running on your machine. You can start it using the following command:
 
-### Analyzing the Bundle Size
+For Windows:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+```bash
+  "C:\Program Files\MongoDB\Server\<your_version>\bin\mongod.exe" --dbpath "C:\data\db"
+```
 
-### Making a Progressive Web App
+For macOS/Linux : 
+```bash
+  mongod --dbpath /usr/local/var/mongodb
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Start the Backend Server
+In the backend directory, start the backend server:
+```bash
+  cd backend
+  node server.js
+```
 
-### Advanced Configuration
+## Start the Frontend Development Server
+In the sea-salon directory, start the frontend development server:
+```bash
+  cd sea-salon
+  npm start
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+```
+## Acces the Application 
+Open your browser and navigate to http://localhost:3000 to access the SEA Salon application.
 
-### Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+### Summary
 
-### `npm run build` fails to minify
+This `README.md` provides a comprehensive guide on how to set up and run your SEA Salon application, including necessary environment variables and detailed instructions for both backend and frontend components. You can customize it further to match any specific details or requirements for your project.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
